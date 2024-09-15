@@ -7,6 +7,7 @@ import ParentComp from './Components/Props/ParentComp'
 import ChildComp from './Components/Props/ChildComp'
 import GrandParent from './Components/Props/GrandParent'
 import DataFetchFromContext from './ContextAPi/DataFetchFromContext'
+import FetchGithubUser from './Custom Hooks/FetchGithubUser'
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/parent' element={<ParentComp />} />
         <Route path='/child' element={<ChildComp />} />
         <Route path='/context' element={<DataFetchFromContext />} />
+        <Route path='/githubUser' element={<FetchGithubUser />} />
 
       </Routes>
     </Router>
