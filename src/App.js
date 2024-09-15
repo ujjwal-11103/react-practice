@@ -8,6 +8,7 @@ import ChildComp from './Components/Props/ChildComp'
 import GrandParent from './Components/Props/GrandParent'
 import DataFetchFromContext from './ContextAPi/DataFetchFromContext'
 import FetchGithubUser from './Custom Hooks/FetchGithubUser'
+import MainComponent from './lazyLoading/MainComponent'
 
 
 
@@ -15,12 +16,14 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path='/' element={<h1 className='text-center'>Home Section</h1>} />
         <Route path='/hooks' element={<Hooks />} />
         <Route path='/grandParent' element={<GrandParent />} />
         <Route path='/parent' element={<ParentComp />} />
         <Route path='/child' element={<ChildComp />} />
         <Route path='/context' element={<DataFetchFromContext />} />
         <Route path='/githubUser' element={<FetchGithubUser />} />
+        <Route path='/lazy' element={<MainComponent />} />
 
       </Routes>
     </Router>
