@@ -9,6 +9,8 @@ import GrandParent from './Components/Props/GrandParent'
 import DataFetchFromContext from './ContextAPi/DataFetchFromContext'
 import FetchGithubUser from './Custom Hooks/FetchGithubUser'
 import MainComponent from './lazyLoading/MainComponent'
+import Dashboard from './Protected Route/Dashboard'
+import ProtectedRoute from './Protected Route/ProtectedRoute'
 
 
 
@@ -24,6 +26,10 @@ const App = () => {
         <Route path='/context' element={<DataFetchFromContext />} />
         <Route path='/githubUser' element={<FetchGithubUser />} />
         <Route path='/lazy' element={<MainComponent />} />
+
+
+        {/* PROTECTED ROUTE */}
+        <Route path='/dashboard' element={<ProtectedRoute element={<Dashboard />} />} />
 
       </Routes>
     </Router>

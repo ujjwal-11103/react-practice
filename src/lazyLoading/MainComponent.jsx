@@ -6,8 +6,6 @@ const LazyComp = React.lazy(() => import('./SlowComponent'))
 
 const MainComponent = () => {
 
-    const [loader, setLoader] = useState(false)
-
     return (
         <div>
 
@@ -16,7 +14,6 @@ const MainComponent = () => {
             <Suspense fallback={<div><h1>Loading Slow Component wait ...</h1></div>}>
                 <LazyComp />
             </Suspense>
-
 
 
         </div>

@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from './ContextAPi/ThemeContext';
+import { AuthProvider } from './Protected Route/AuthApi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>
+  <AuthProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
